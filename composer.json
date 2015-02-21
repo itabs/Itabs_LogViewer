@@ -1,0 +1,16 @@
+{
+  "name": "itabs/logviewer",
+  "description": "This extension provides the possibility to view log files in the backend.",
+  "type": "magento-module",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "ITABS GmbH",
+      "email": "info@itabs.de"
+    }
+  ],
+  "suggest": {
+    "magento-hackathon/magento-composer-installer": "*"
+  }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * This file is part of the Itabs_LogViewer module.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @category  Itabs
+ * @package   Itabs_LogViewer
+ * @author    ITABS GmbH <info@itabs.de>
+ * @copyright 2015 ITABS GmbH (http://www.itabs.de)
+ */
+-->
+<config>
+    <modules>
+        <Itabs_LogViewer>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Adminhtml/>
+            </depends>
+        </Itabs_LogViewer>
+    </modules>
+</config>

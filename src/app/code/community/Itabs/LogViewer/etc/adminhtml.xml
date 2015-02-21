@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * This file is part of the Itabs_LogViewer module.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @category  Itabs
+ * @package   Itabs_LogViewer
+ * @author    ITABS GmbH <info@itabs.de>
+ * @copyright 2015 ITABS GmbH (http://www.itabs.de)
+ */
+-->
+<config>
+    <menu>
+        <system>
+            <children>
+                <logviewer>
+                    <title>Log Viewer</title>
+                    <action>adminhtml/logviewer/index</action>
+                    <sort_order>1</sort_order>
+                </logviewer>
+            </children>
+        </system>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <logviewer>
+                                <title>Log Viewer</title>
+                                <sort_order>1</sort_order>
+                            </logviewer>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

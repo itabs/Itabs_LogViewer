@@ -1,0 +1,6 @@
+src/app/code/community/Itabs/LogViewer                                  app/code/community/Itabs/LogViewer
+src/app/design/adminhtml/default/default/layout/itabs/logviewer.xml     app/design/adminhtml/default/default/layout/itabs/logviewer.xml
+src/app/design/adminhtml/default/default/template/itabs/logviewer       app/design/adminhtml/default/default/template/itabs/logviewer
+src/app/etc/modules/Itabs_LogViewer.xml                                 app/etc/modules/Itabs_LogViewer.xml
+src/app/locale/de_DE/Itabs_LogViewer.csv                                app/locale/de_DE/Itabs_LogViewer.csv
+src/skin/adminhtml/default/default/itabs/logviewer                      skin/adminhtml/default/default/itabs/logviewer

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * This file is part of the Itabs_LogViewer module.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @category  Itabs
+ * @package   Itabs_LogViewer
+ * @author    ITABS GmbH <info@itabs.de>
+ * @copyright 2015 ITABS GmbH (http://www.itabs.de)
+ */
+-->
+<config>
+    <modules>
+        <Itabs_LogViewer>
+            <version>1.0.0</version>
+        </Itabs_LogViewer>
+    </modules>
+    <global>
+        <blocks>
+            <itabs_logviewer>
+                <class>Itabs_LogViewer_Block</class>
+            </itabs_logviewer>
+        </blocks>
+        <helpers>
+            <itabs_logviewer>
+                <class>Itabs_LogViewer_Helper</class>
+            </itabs_logviewer>
+        </helpers>
+        <models>
+            <itabs_logviewer>
+                <class>Itabs_LogViewer_Model</class>
+            </itabs_logviewer>
+        </models>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <itabs_logview before="Mage_Adminhtml">Itabs_LogViewer_Adminhtml</itabs_logview>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <itabs_logviewer>
+                    <file>itabs/logviewer.xml</file>
+                </itabs_logviewer>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <itabs_logviewer>
+                    <files>
+                        <default>Itabs_LogViewer.csv</default>
+                    </files>
+                </itabs_logviewer>
+            </modules>
+        </translate>
+    </adminhtml>
+    <phpunit>
+        <suite>
+            <modules>
+                <Itabs_LogViewer/>
+            </modules>
+        </suite>
+    </phpunit>
+</config>
