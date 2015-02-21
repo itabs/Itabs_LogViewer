@@ -1,0 +1,34 @@
+/**
+ * This file is part of the Itabs_LogViewer module.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @category  Itabs
+ * @package   Itabs_LogViewer
+ * @author    ITABS GmbH <info@itabs.de>
+ * @copyright 2015 ITABS GmbH (http://www.itabs.de)
+ */
+
+.adminhtml-logviewer-index .content-header .icon-head {
+    padding-left: 0;
+}
+
+.log-output {
+    height: 500px;
+    overflow: auto;
+    margin: 0;
+    padding: 5px 10px;
+    background: black;
+    color: #c7c7c7;
+    font: normal 11px/14px Lucida Console, Courier New, serif;
+}
+
+table.logviewer td.label {
+    width: 125px;
+}
+
+table.logviewer td.label label {
+    width: auto;
+}
+

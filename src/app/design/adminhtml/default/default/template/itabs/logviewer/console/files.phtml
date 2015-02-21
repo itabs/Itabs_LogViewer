@@ -1,0 +1,51 @@
+<?php
+/**
+ * This file is part of the Itabs_LogViewer module.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @category  Itabs
+ * @package   Itabs_LogViewer
+ * @author    ITABS GmbH <info@itabs.de>
+ * @copyright 2015 ITABS GmbH (http://www.itabs.de)
+ */
+/**
+ * @var $this Itabs_LogViewer_Block_Adminhtml_Console_Files
+ */
+$logFiles = $this->getLogFiles();
+$currentFile = $this->getLogHelper()->getCurrentFile();
+?>
+<div class="entry-edit">
+	<div class="fieldset" id="base_fieldset">
+	    <div class="hor-scroll">
+			<table class="form-list logviewer" cellspacing="0">
+				<tbody>
+					<tr>
+						<td class="label"><label for="files"><?php echo $this->__('Log File')?></label></td>
+						<td class="value">
+							<select id="files" onchange="setLocation(this.value)">
+								<option value="<?php echo $this->getSecureUrl()?>"><?php echo $this->__('Please Select')?></option>
+   							    <?php foreach ($logFiles as $logFile): ?>
+   									<option value="<?php echo $this->getSecureUrl($logFile['text'])?>" <?php if ($logFile['text'] == $currentFile):?>selected="selected"<?php endif;?>><?php echo $logFile['text']?></option>
+   							    <?php endforeach;?>
+							</select>
+						</td>
+					</tr>
+                    <?php if ($currentFile): ?>
+                    <tr>
+						<td class="label"><label for="lines"><?php echo $this->__('Lines')?></label></td>
+						<td class="value">
+							<select id="lines" onchange="setLocation(this.value)">
+                                <?php foreach ($this->getAvailableLines() as $value => $label): ?>
+   									<option value="<?php echo $this->getSecureUrl($currentFile, $value)?>" <?php if ($value == $this->getLogHelper()->getCurrentLines()):?>selected="selected"<?php endif;?>><?php echo $label?></option>
+   							    <?php endforeach;?>
+							</select>
+						</td>
+					</tr>
+                    <?php endif; ?>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,7 @@
+source:
+  options:
+    50: 50 lines
+    100: 100 lines
+    250: 250 lines
+    500: 500 lines
+    1000: 1000 lines

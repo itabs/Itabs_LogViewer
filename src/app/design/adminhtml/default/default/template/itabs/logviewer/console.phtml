@@ -1,0 +1,30 @@
+<?php
+/**
+ * This file is part of the Itabs_LogViewer module.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @category  Itabs
+ * @package   Itabs_LogViewer
+ * @author    ITABS GmbH <info@itabs.de>
+ * @copyright 2015 ITABS GmbH (http://www.itabs.de)
+ */
+/**
+ * @var Itabs_LogViewer_Block_Adminhtml_Console
+ */
+?>
+<div class="content-header">
+    <h3 class="icon-head"><?php echo $this->__('Log Viewer')?></h3>
+    <p class="form-buttons">
+        <?php echo $this->getButtonsHtml()?>
+    </p>
+</div>
+
+<?php echo $this->getChildHtml('files');?>
+
+<?php if ($this->getLogHelper()->getCurrentFile()): ?>
+    <div class="log-output">
+        <?php echo $this->getLogOutput()?>
+    </div>
+<?php endif; ?>
